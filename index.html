@@ -1,0 +1,643 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(58, 57, 57);
+            margin: 0px;
+            padding: 0px;
+
+        }
+
+        .loginpg {
+            box-sizing: border-box;
+            background-image: url('NETFLIXBG.jpg');
+            width: max(1200px,100vw);
+            height: 82vh;
+            object-fit: contain;
+            background-position: center center;
+            background-size: 120%;
+            background-image: radial-gradient(circle, black 100%);
+
+        }
+
+        .nav {
+            box-sizing: border-box;
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 200px;
+            padding-top: 28px;
+            z-index: 2;
+            width: 100vw;
+            /* margin: 0px 100px; */
+
+            /* max-width: 750px; */
+        }
+
+        .black {
+            position: absolute;
+            top: 0px;
+            width: 100vw;
+            height: 82vh;
+            background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
+        }
+
+
+
+        .signin {
+            background-color: red;
+            color: white;
+            font-family: sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 0px 13px;
+            padding-top: 7px;
+            padding-bottom: 7px;
+            border-radius: 5px;
+            border-style: none;
+            margin-left: 20px;
+        }
+
+        .lang {
+            background-color: rgba(240, 248, 255, 0);
+            color: white;
+            padding: 7px 13px;
+            border-radius: 5px;
+            border: 1px solid rgba(255, 255, 255, 0.326);
+            font-family: sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+
+        .heading {
+            color: rgb(255, 255, 255);
+            width: 100vw;
+            height: 85vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: auto;
+
+        }
+
+       
+
+        .heading h1 {
+            font-family: sans-serif;
+            font-size: 45px;
+            font-weight: 900;
+            z-index: 4;
+        }
+
+     
+
+        .ready {
+
+            font-size: 18px;
+            font-weight: 600;
+            color: rgb(255, 255, 255);
+            font-size: 25px;
+            font-weight: 400;
+            font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+            margin: 13px;
+            z-index: 8;
+
+        }
+
+      
+
+
+        #email {
+            position: relative;
+            background-color: transparent;
+            color: rgb(255, 255, 255);
+            z-index: 15;
+            text-align: left;
+            font-size: 15px;
+            font-weight: bolder;
+            padding: 17px 0px;
+            padding-left: 15px;
+            padding-right: 155px;
+            border: 1px solid rgba(255, 255, 255, 0.217);
+            border-radius: 5px;
+        }
+
+        #emil:active {
+            background-color: transparent;
+        }
+
+        .mobileemail {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .getstarted {
+            position: relative;
+            margin-left: 9px;
+            padding: 13px 0px;
+            padding-left: 24px;
+            padding-right: 25px;
+            font-size: 22px;
+            font-weight: bolder;
+            background-color: rgb(229, 9, 20);
+            color: rgb(255, 255, 255);
+            border-radius: 5px;
+            z-index: 17;
+            text-align: center;
+            display: flex;
+            border-style: none;
+
+        }
+
+        .getstarted img {
+            padding-left: 10px;
+        }
+
+        .second {
+            width: 100vw;
+            height: 65vh;
+            background-color: black;
+            margin-top: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .sechead {
+            color: white;
+            font-size: 26px;
+            font-family: sans-serif;
+        }
+
+        .secpara {
+            color: white;
+            font-size: 30px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding-top: 16px;
+        }
+
+        .txt {
+            display: flex;
+            flex-direction: column;
+            width: 34vw;
+
+        }
+
+        .tv {
+            position: relative;
+        }
+
+        .tv video {
+            position: absolute;
+            top: 100px;
+            height: 261px;
+            left: 86px;
+        }
+
+        .tv img {
+            position: relative;
+        }
+
+
+        .third {
+            width: 100vw;
+            height: 65vh;
+            background-color: black;
+            margin-top: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .thirdhead {
+            color: white;
+            font-size: 26px;
+            font-family: sans-serif;
+        }
+
+        .thirdpara {
+            color: white;
+            font-size: 30px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding-top: 16px;
+        }
+
+        .txt2 {
+            display: flex;
+            flex-direction: column;
+            width: 37vw;
+
+        }
+
+        .stranger {
+            position: relative;
+        }
+
+        .stranger video {
+            position: absolute;
+            top: 100px;
+            height: 261px;
+            left: 86px;
+        }
+
+        .stranger img {
+            position: relative;
+        }
+
+        .cardstranger {
+            color: white;
+            font-family: sans-serif;
+        }
+
+        .strangertxt {
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .loadingstranger {
+            position: absolute;
+            top: 320px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            border: 1px solid rgba(255, 255, 255, 0.361);
+            border-radius: 10px;
+            width: 340px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: black;
+            left: 130px;
+        }
+
+        .loadingstrangertxt {
+            display: flex;
+            flex-direction: column;
+            padding-right: 60px;
+            padding-left: 20px;
+        }
+
+        .downloading {
+            font-weight: lighter;
+            font-size: smaller;
+            color: #0071eb;
+        }
+
+        .gif {
+            height: 60px;
+            width: 48px;
+            background: url(https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/download-icon.gif);
+            background-size: 100%;
+            background-repeat: no-repeat;
+
+
+
+        }
+
+        .rajma{
+            position: relative;
+        }
+
+        .rajma video {
+            position:relative;
+            bottom: 200px;
+           left: 470px;
+
+
+        }
+
+        .rajma img {
+            position: relative;
+        }
+
+        .faq {
+            background-color: black;
+            height: 110vh;
+            width: 100vw;
+            margin-top: 12px;
+        }
+
+        .headfaq {
+            color: white;
+            font-size: 50px;
+            font-family: sans-serif;
+            font-weight: 900;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        .que {
+            margin-top: 15px;
+            background-color: rgb(45, 45, 45);
+            color: white;
+            width: 70vw;
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 25px;
+            font-family: sans-serif;
+            padding-left: 20px;
+            padding-right: 20px;
+
+
+        }
+
+        .que:hover {
+            background-color: rgb(64, 64, 64);
+            transition:ease-in-out;
+            transition-duration: 180ms;
+        }
+
+        .ques {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .emailpart {
+            padding-top: 30px;
+        }
+
+        .footer {
+            height: 50vh;
+            width: 100vw;
+            background-color: black;
+            margin-top: 12px;
+            font-size: 20px;
+
+
+
+        }
+
+        .contactno {
+            color: white;
+            position: relative;
+            top: 96px;
+            left: 225px;
+            padding-bottom: 30px;
+
+        }
+
+        .anywhere {
+            font-size: 25px;
+            font-family: sans-serif;
+            padding: 20px 0px;
+
+        }
+
+        .list {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .lists {
+            display: flex;
+            align-items: start;
+            justify-content: center;
+            color: white;
+            gap: 170px;
+            position: relative;
+            top: 100px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loginpg">
+
+        <div class="nav">
+            <span><img width="145" src="LOGONETFLIX.SVG" alt=""></span>
+            <div class="btnav">
+                <span><button class="btn lang">English</button></span>
+                <span><button class="btn signin">Sign In</button></span>
+            </div>
+        </div>
+        <div class="black"></div>
+        <div class="heading">
+            <div>
+                <h1>Unlimited movies, TV shows and more</h1>
+            </div>
+            <div class="anywhere">
+                <p>Watch anywhere. Cancel anytime</p>
+            </div>
+            <div>
+                <p class="ready">Ready to watch? Enter your email or mobile number to create or restart your membership.
+                </p>
+            </div>
+            <div class="mobileemail">
+                <span>
+                    <form action="get">
+                        <input type="text" name="" id="email" placeholder="Email or mobile number">
+                    </form>
+                </span>
+                <span>
+                    <button class="getstarted">
+                        Get Started
+                        <img src="getstarted.svg" alt="">
+                    </button>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="second">
+        <div class="txt">
+            <div class="sechead">
+                <h1>Enjoy on your TV</h1>
+            </div>
+            <div class="secpara">
+                <p>Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
+            </div>
+        </div>
+        <div class="tv">
+            <video src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v"
+                loop autoplay></video>
+            <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png" alt="">
+        </div>
+
+    </div>
+
+    <div class="third">
+        <div class="stranger">
+
+            <img height="450"
+                src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg" alt="">
+
+            <div class="loadingstranger">
+                <img width="57"
+                    src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/boxshot.png" alt="">
+                <div class="loadingstrangertxt">
+                    <div class="strangertxt cardstranger">Stranger Things</div>
+                    <div class="downloading cardstranger">Downloading... </div>
+
+                </div>
+                <div class="gif"></div>
+            </div>
+        </div>
+        <div class="txt2">
+            <div class="thirdhead">
+                <h1>Download your shows to watch offline</h1>
+            </div>
+            <div class="thirdpara">
+                <p>Save your favourites easily and always have something to watch.</p>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="second">
+        <div class="txt">
+            <div class="sechead">
+                <h1>Watch everywhere</h1>
+            </div>
+            <div class="secpara">
+                <p>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
+            </div>
+        </div>
+        <div class="rajma">
+            <video width="358.66"
+                src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices-in.m4v" loop
+                autoplay></video>
+            <img width="569" height="427"
+                src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile-in.png" alt="">
+        </div>
+
+    </div>
+    <div class="second">
+        <div class="tv">
+            <img width="569" height="427"
+                src="https://occ-0-6246-2164.1.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABVr8nYuAg0xDpXDv0VI9HUoH7r2aGp4TKRCsKNQrMwxzTtr-NlwOHeS8bCI2oeZddmu3nMYr3j9MjYhHyjBASb1FaOGYZNYvPBCL.png?r=54d"
+                alt="">
+        </div>
+
+        <div class="txt">
+            <div class="sechead">
+                <h1>Create profiles for kids</h1>
+            </div>
+            <div class="secpara">
+                <p>Send children on adventures with their favourite characters in a space made just for them—free with
+                    your membership.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="faq">
+        <div class="headfaq">Frequently Asked Questions</div>
+        <div class="ques">
+            <div class="que">What is Netflix?
+                <div class="plus"><img src="plus.svg" alt=""></div>
+            </div>
+            <div class="que">How much does Netflix cost?
+                <div class="plus"><img src="plus.svg" alt=""></div>
+            </div>
+            <div class="que">Where can I watch?
+                <div class="plus"><img src="plus.svg" alt=""></div>
+            </div>
+            <div class="que">How do I cancel?
+                <div class="plus"><img src="plus.svg" alt=""></div>
+            </div>
+            <div class="que">What can I watch on Netflix?
+                <div class="plus"><img src="plus.svg" alt=""></div>
+            </div>
+            <div class="que">Is Netflix good for kids?
+                <div class="plus"><img src="plus.svg" alt=""></div>
+            </div>
+            <div class="emailpart">
+                <div>
+                    <p class="ready">Ready to watch? Enter your email or mobile number to create or restart your
+                        membership.
+                    </p>
+                </div>
+                <div class="mobileemail">
+                    <span>
+                        <form action="get">
+                            <input type="text" name="" id="email" placeholder="Email or mobile number">
+                        </form>
+                    </span>
+                    <span>
+                        <button class="getstarted">
+                            Get Started
+                            <img src="getstarted.svg" alt="">
+                        </button>
+                    </span>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <div class="contactno">Questions? Call 000-800-919-1694</div>
+        <div class="lists">
+            <div class="list1 list">
+
+                <div> FAQ </div>
+                <div> Investor Relations</div>
+                <div> Privacy </div>
+                <div> Speed Test</div>
+
+
+
+            </div>
+
+            <div class="list2 list">
+
+                <div> Help Center</div>
+
+                <div>Jobs</div>
+                <div>Cookie Preferences </div>
+                <div>Legal Notice</div>
+
+            </div>
+
+            <div class="list3 list">
+
+                <div> Accounts</div>
+                <div>Ways to Watch</div>
+                <div> Corporate Information</div>
+                <div> Only on Netflix</div>
+
+            </div>
+
+            <div class="list4 list">
+
+                <div> Media</div>
+                <div>Term of Use</div>
+                <div> Contact Us</div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+</body>
+
+</html>
